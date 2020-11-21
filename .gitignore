@@ -1,2 +1,4 @@
 # Project exclude paths
-/sentinel_quick_start/target/
+*.iml
+target
+.idea
