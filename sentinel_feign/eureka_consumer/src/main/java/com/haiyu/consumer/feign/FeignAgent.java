@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @Date: 2020/11/21 20:01
  * @Version 1.0
  */
-@FeignClient(value = "sentinel-fegin-provider",fallback = FeignAgentFallBack.class)
+@FeignClient(value = "sentinel-feign-provider",fallback = FeignAgentFallBack.class)
 public interface FeignAgent {
     @GetMapping("/hello")
     String hello();

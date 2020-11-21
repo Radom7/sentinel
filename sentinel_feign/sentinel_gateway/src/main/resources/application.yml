@@ -1,0 +1,22 @@
+server:
+  port: 9110
+
+spring:
+  application:
+    name: sentinel-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: sentinel-feign-gateway
+          uri: lb://sentinel-feign-client:9012
+          predicates:
+            - Path=/hello/**
+    sentinel:
+      transport:
+        dashboard: localhost:9000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9010/eureka
+

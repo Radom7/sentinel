@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: sentinel-fegin-client
+    name: sentinel-feign-client
   cloud:
     sentinel:
       transport:
