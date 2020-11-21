@@ -36,21 +36,21 @@ public class TestController {
     /** 定义限流规则
      * @PostConstruct 此注解的含义是：本类构造方法执行结束后执行
      */
-    @PostConstruct
-    public void initFloRule(){
-        //1.创建存放限流规则的集合
-        List<FlowRule> ruleList = new ArrayList<>();
-        //2.创建限流规则
-        FlowRule flowRule = new FlowRule();
-        //定义资源，表示Sentinel会对哪个资源生效
-        flowRule.setResource("Hello");
-        //定义限流的类型(此处使用QPS作为限流类型)
-        flowRule.setGrade(RuleConstant.FLOW_GRADE_QPS);
-        //定义QPS每秒通过的请求数
-        flowRule.setCount(2);
-        //3.将限流规则存放到集合中
-        ruleList.add(flowRule);
-        //4.加载限流规则
-        FlowRuleManager.loadRules(ruleList);
-    }
+//    @PostConstruct
+//    public void initFloRule(){
+//        //1.创建存放限流规则的集合
+//        List<FlowRule> ruleList = new ArrayList<>();
+//        //2.创建限流规则
+//        FlowRule flowRule = new FlowRule();
+//        //定义资源，表示Sentinel会对哪个资源生效
+//        flowRule.setResource("Hello");
+//        //定义限流的类型(此处使用QPS作为限流类型)
+//        flowRule.setGrade(RuleConstant.FLOW_GRADE_QPS);
+//        //定义QPS每秒通过的请求数
+//        flowRule.setCount(2);
+//        //3.将限流规则存放到集合中
+//        ruleList.add(flowRule);
+//        //4.加载限流规则
+//        FlowRuleManager.loadRules(ruleList);
+//    }
 }
