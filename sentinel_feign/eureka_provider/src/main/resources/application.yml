@@ -1,0 +1,10 @@
+server:
+  port: 9011
+
+spring:
+  application:
+    name: sentinel-fegin-provider
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9010/eureka
